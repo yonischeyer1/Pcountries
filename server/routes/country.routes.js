@@ -4,17 +4,6 @@ const router = express.Router();
 import {getCountries, getAllCountries, editCountry, removeCountry} from '../controllers/country.controller.js'
 
 
-router.get('/country/:id', async (req,res)=>{
-    try {
-        const price = await calculateDiamondPrice(req.body).catch((err)=>{
-            throw err
-        });
-        return res.json({price})
-    } catch (err) {
-        res.status(err.status || 500).json({error:err.message})
-    }
-})
-
 router.get('/allCountries', async (req,res)=>{
     try {
         const countries = await getAllCountries().catch((err)=>{
