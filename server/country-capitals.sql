@@ -253,3 +253,6 @@ INSERT INTO country(CountryName,CapitalName,CapitalLatitude,CapitalLongitude,Cou
 INSERT INTO country(CountryName,CapitalName,CapitalLatitude,CapitalLongitude,CountryCode,ContinentName) VALUES ('Heard Island and McDonald Islands','N/A','0',0.000000,'HM','Antarctica');
 INSERT INTO country(CountryName,CapitalName,CapitalLatitude,CapitalLongitude,CountryCode,ContinentName) VALUES ('British Indian Ocean Territory','Diego Garcia','-7.3',72.400000,'IO','Africa');
 INSERT INTO country(CountryName,CapitalName,CapitalLatitude,CapitalLongitude,CountryCode,ContinentName) VALUES ('Macau','N/A','0',0.000000,'MO','Asia');
+
+ALTER TABLE `z2a`.`country` 
+ADD COLUMN `description` VARCHAR(255) NULL AFTER `ContinentName`;
